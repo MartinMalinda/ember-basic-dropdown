@@ -104,10 +104,6 @@ export default Component.extend({
     return `ember-basic-dropdown-content-${this.elementId}`;
   }),
 
-  tabIndex: computed('disabled', function() {
-    return !this.get('disabled') ? (this.get('tabindex') || '0') : null;
-  }),
-
   publicAPI: computed(function() {
     return {
       isOpen: this.get('initiallyOpened'),
